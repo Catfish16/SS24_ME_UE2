@@ -130,7 +130,7 @@ const PubMedSearch: React.FC = () => {
      */
     const executeSearch = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const searchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${searchTerm}&retmode=json&retmax=10`;
+        const searchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${searchTerm}&retmode=json&retmax=${resNum}`;
 
         try {
             const searchResponse = await fetch(searchUrl);

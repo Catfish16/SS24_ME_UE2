@@ -1,38 +1,208 @@
+/* General App Styles */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: "Segoe UI Historic", sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 5vh;
+  background-color: #eaf4fc;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.5em;
+  color: #354d73;
+  margin-bottom: 4rem;
+}
+
+.App-title {
+  margin: 1rem 5rem;
+}
+
+.menu-button {
+  color: steelblue;
+  margin: 0 3rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.menu-button:hover {
+  color: #234059;
+}
+
+.prompt {
+  font-size: 1.5rem;
+  color: #234059;
+  font-family: "Segoe UI Semibold", sans-serif;
+  margin-bottom: 4rem;
+}
+
+/* Search Area Styles */
+#searchArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+#searchArea form {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  align-content: center;
+  justify-content: center;
+}
+
+#searchArea input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #354d73;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+#searchArea button[type="submit"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #354d73;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchArea button[type="submit"]:hover {
+  background-color: #234059;
+}
+
+/* Sensitivity Setting Styles */
+.searchSensitivitySetting {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.searchSensitivitySetting div {
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-family: "Segoe UI Semibold", sans-serif;
+  color: #234059;
+}
+
+.searchSensitivitySetting button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #eaf4fc;
+  color: #354d73;
+  border: 2px solid #354d73;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchSensitivitySetting button:hover {
+  background-color: #354d73;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Search results settings Styles*/
+.searchResultsSetting {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchResultsSetting div {
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-family: "Segoe UI Semibold", sans-serif;
+  color: #234059;
+}
+
+/* Results Section Styles */
+#results {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#results h2 {
+  color: #354d73;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#results h3 {
+  color: #234059;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+#results p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+#results div {
+  margin-bottom: 2rem;
+}
+
+mark {
+  background-color: rgba(70, 130, 180, 0.15);
+}
+
+/* Highlighted Sentences Styles */
+.highlighted-sentences {
+  margin-bottom: 2rem;
+}
+
+.highlighted-sentences p {
+  background-color: #eaf4fc;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* Pop-up Styles */
+.popup {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 80%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup h3, .popup p, .popup a {
+  margin-bottom: 0.5rem;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.popup-close:hover {
+  color: #f00;
 }

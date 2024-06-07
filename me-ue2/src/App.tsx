@@ -1,18 +1,45 @@
 import React from 'react';
 import './App.css';
 import PubMedSearch from "./PubMedSearch";
+import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-          <h4>
-              Title
-          </h4>
+        <header className="App-header">
+          <span className="App-title">
+              DocSearch
+          </span>
+          <div>
+              <button className="menu-button">
+                  <a href="/">
+                    Home
+                  </a>
+              </button>
+              <button
+                  className="menu-button"
+              >
+                  About
+              </button>
+              <span
+                  className="menu-button"
+              >
+                  Resources
+              </span>
+              <span
+                  className="menu-button"
+              >
+                  Support
+              </span>
+          </div>
+
       </header>
-        <main className="App">
+        <div className="content">
+            <div className="prompt">
+                Discover the Latest Medical Research and Clinical Guidelines
+            </div>
            <PubMedSearch/>
-        </main>
+        </div>
     </div>
   );
 }
